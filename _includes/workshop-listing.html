@@ -17,8 +17,8 @@ workshops:
 
 <div class="container col-xxl-8 px-4 py-5">
   <h2 class="display-5 fw-bold lh-1 mb-3">Workshops</h2>
-  <p>Upcoming Workshops teaching Carpentries Incubator Material{% unless site.data.incubator-workshops %} <strong>coming soon...</strong>{% endunless %}.</p>
-  {% if site.data.incubator-workshops %}
+  <p>Upcoming Workshops teaching Carpentries Incubator Material{% unless site.data.workshops %} <strong>coming soon...</strong>{% endunless %}.</p>
+  {% if site.data.workshops %}
   <table class="table table-striped">
     <thead>
       <tr>
@@ -29,8 +29,9 @@ workshops:
       </tr>
     </thead>
     <tbody>
-      {% assign workshops = site.data.incubator-workshops | sort: "startdate" %}
-      {% for workshop in workshops %}
+      {% assign workshops = site.data.workshops | sort: "startdate" %}
+      {% for workshop_hash in workshops %}
+      {% assign workshop = workshop_hash[1] %}
       <tr>
         <th scope="row">{{workshop.country}}</th>
         <td>{{ workshop.startdate }}{% if workshop.startdate != workshop.enddate %} - {{ workshop.enddate }}{% endif %}</td>
