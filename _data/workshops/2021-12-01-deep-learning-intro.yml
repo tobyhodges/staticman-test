@@ -1,0 +1,7 @@
+_id: b49320b0-0418-11ec-90c6-d1de2c92b4c5
+country: de
+startdate: '2021-12-01'
+enddate: '2021-12-03'
+lesson_title: Introduction to Deep Learning with Python
+lesson_slug: deep-learning-intro
+website: 'https://carpentries.org'
