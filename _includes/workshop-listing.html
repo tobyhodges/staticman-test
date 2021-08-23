@@ -9,12 +9,6 @@
   Note: although this block was tested with YAML data, it should work equally well with a JSON blob e.g. from a data feed.
 -->
 
-incubator-workshops:  
-{{ site.data.incubator-workshops }}
-
-workshops:  
-{{ site.data.workshops | sort }}
-
 <div class="container col-xxl-8 px-4 py-5">
   <h2 class="display-5 fw-bold lh-1 mb-3">Workshops</h2>
   <p>Upcoming Workshops teaching Carpentries Incubator Material{% unless site.data.workshops %} <strong>coming soon...</strong>{% endunless %}.</p>
@@ -29,7 +23,7 @@ workshops:
       </tr>
     </thead>
     <tbody>
-      {% assign workshops = site.data.workshops %}
+      {% assign workshops = site.data.workshops | sort %}
       {% for workshop_hash in workshops %}
       {% assign workshop = workshop_hash[1] %}
       <tr>
