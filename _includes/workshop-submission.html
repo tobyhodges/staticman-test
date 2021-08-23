@@ -1,25 +1,43 @@
 <form method="POST" action="https://th-incubator-workshops.herokuapp.com/v3/entry/github/tobyhodges/staticman-test/main/workshop-submission">
   <div class="form-group">
-  <input name="options[redirect]" type="hidden" value="https://carpentries-incubator.org/">
+    <input name="options[redirect]" type="hidden" value="https://carpentries-incubator.org/">
   </div>
-  <div class="form-group">
-  <label><input name="fields[country]" type="text" required>Two-letter country code</label>
+  <div class="form-group row">
+    <label for="country_code" class="col-sm-2 col-form-label">Two-letter country code</label>
+    <div class="col-sm-10">
+      <input name="fields[country]" type="text" id="country_code" required>
+    </div>
   </div>
-  <div class="form-group">
-  <label><input name="fields[startdate]" type="date" required>Workshop start date</label>
+  <div class="form-group row">
+    <label for="start_date" class="col-sm-2 col-form-label">Workshop start date</label>
+    <div class="col-sm-10">
+      <input name="fields[startdate]" type="date" id="start_date" required>
+    </div>
   </div>
-  <div class="form-group">
-  <label><input name="fields[enddate]" type="date">Workshop end date</label>
+  <div class="form-group row">
+    <label for="end_date" class="col-sm-2 col-form-label">Workshop end date</label>
+    <div class="col-sm-10">
+      <input name="fields[enddate]" type="date" id="end_date" required>
+    </div>
   </div>
-  <div class="form-group">
-  <label><input name="fields[lesson_title]" type="text" required>Lesson title</label>
+  <div class="form-group row">
+    <label for="lesson_title" class="col-sm-2 col-form-label">Lesson title</label>
+    <div class="col-sm-10">
+      <input name="fields[lesson_title]" type="text" id="lesson_title" required>
+    </div>
   </div>
-  <div class="form-group">
-  <label><input name="fields[lesson_slug]" type="text" required>Lesson repository slug</label>
+  <div class="form-group row">
+    <label for="lesson_slug" class="col-sm-2 col-form-label">Lesson slug</label>
+    <div class="col-sm-10">
+      <input name="fields[lesson_slug]" type="text" id="lesson_slug" required>
+    </div>
     <small id="slug-help" class="form-text text-muted">The part after "carpentries-incubator/" in the repository URL.</small>
   </div>
   <div class="form-group">
-  <label><input name="fields[website]" type="url" required>Workshop website</label>
+    <label for="website" class="col-sm-2 col-form-label">Workshop website</label>
+    <div class="col-sm-10">
+      <input name="fields[website]" type="text" id="website" required>
+    </div>
   </div>
   <button type="submit" class="btn btn-primary">Submit workshop</button>
 </form>
