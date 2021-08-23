@@ -29,7 +29,7 @@ workshops:
       </tr>
     </thead>
     <tbody>
-      {% assign workshops = site.data.workshops | sort: "startdate" %}
+      {% assign workshops = site.data.workshops %}
       {% for workshop_hash in workshops %}
       {% assign workshop = workshop_hash[1] %}
       <tr>
