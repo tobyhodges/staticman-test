@@ -1,10 +1,25 @@
 <form method="POST" action="https://th-incubator-workshops.herokuapp.com/v3/entry/github/tobyhodges/staticman-test/main/workshop-submission">
+  <div class="form-group">
   <input name="options[redirect]" type="hidden" value="https://carpentries-incubator.org/">
+  </div>
+  <div class="form-group">
   <label><input name="fields[country]" type="text" required>Two-letter country code</label>
-  <label><input name="fields[startdate]" type="date" required>Workshop start date (YYYY-MM-DD)</label>
-  <label><input name="fields[enddate]" type="date">Workshop end date (YYYY-MM-DD)</label>
+  </div>
+  <div class="form-group">
+  <label><input name="fields[startdate]" type="date" required>Workshop start date</label>
+  </div>
+  <div class="form-group">
+  <label><input name="fields[enddate]" type="date">Workshop end date</label>
+  </div>
+  <div class="form-group">
   <label><input name="fields[lesson_title]" type="text" required>Lesson title</label>
-  <label><input name="fields[lesson_slug]" type="text" required>Lesson repository slug (after "carpentries-incubator/" in the repo URL)</label>
+  </div>
+  <div class="form-group">
+  <label><input name="fields[lesson_slug]" type="text" required>Lesson repository slug</label>
+    <small id="slug-help" class="form-text text-muted">The part after "carpentries-incubator/" in the repository URL.</small>
+  </div>
+  <div class="form-group">
   <label><input name="fields[website]" type="url" required>Workshop website</label>
-  <button type="submit">Submit workshop</button>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit workshop</button>
 </form>
